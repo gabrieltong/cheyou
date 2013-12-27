@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require tagmanager
 //= require_tree .
 
 $(function(){
@@ -24,11 +23,11 @@ $(function(){
       AjaxPush: '/tags/add',
       AjaxPushAllTags: true,
       AjaxPushParameters: {
-        type:$(that).attr('data-type'),
+        user:$(that).attr('data-type'),
+        on:$(that).attr('data-on'),
         id:$(that).attr('data-id'),
-        on:$(that).attr('on')
+        // taggable_on:$(that).attr('data-on')
       },
-      onlyTagList: true
     });
     $(this).typeahead({
       minLength:2,

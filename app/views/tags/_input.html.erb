@@ -1,5 +1,5 @@
 <%
   tags = taggable.owner_tags_on(owner,on).join(',')
 %>
-<input data-data-on='<%=on%>' data-type='<%=taggable.class%>' data-id='<%=taggable.id%>' data-tags='<%=tags%>' type="text" name="tags" placeholder="Tags" class="tm-input tm-input-info tm-tag-small"/>
+<input data-on='<%=on%>' data-type='<%=taggable.class%>' data-id='<%=taggable.id%>' data-tags='<%=tags%>' type="text" name="tags" placeholder="Tags" class="tm-input tm-input-info tm-tag-small"/>
         </td>

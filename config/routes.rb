@@ -1,6 +1,13 @@
 Cheyou::Application.routes.draw do
   resources :users,:only=>[:index,:show,:destroy,:edit,:update]
   root :to => 'users#index'
+
+  resources :tags,:only=>[:index] do
+    collection do
+      post :add
+      match :prefetch
+    end
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
